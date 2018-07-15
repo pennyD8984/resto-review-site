@@ -11,11 +11,8 @@ html, body {
     height: 100%;
 }
 
-body,p{
-  font-family: Arial, Helvetica, sans-serif;
-  color: #333;
-  line-height: 1.5;
-  font-size: 1rem;
+ body, p, td, th {
+  font: 16px/1.6 Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -29,32 +26,38 @@ ul, li {
 }
 
 a {
-  color: orange;
+  color: #ff9292;
   text-decoration: none;
 }
 
 a:hover, a:focus {
-  color: #3397db;
+  color: #d85b5b;  
   text-decoration: none;
 }
+
 a img{
   border: none 0px #fff;
 }
+
 h1, h2, h3, h4, h5, h6 {
   font-family: Arial, Helvetica, sans-serif;
 }
 
 #maincontent {
   background-color: #f3f3f3;
+  display: flex;
   min-height: 100%;
+  flex-direction: column;
 }
+
 #footer {
   background-color: #444;
   color: white;
   letter-spacing: 1px;
-  padding: 25px;
+  padding: 1.2em;
   text-align: center;
   text-transform: uppercase;
+  font-size: 0.8em;
 }
 /* ====================== Navigation ====================== */
 nav {
@@ -72,12 +75,11 @@ nav h1 {
 
 #breadcrumb {
   display: flex;
-  padding-left: 2.6em;
   width: 100%;
   list-style: none;
   background-color: #eee;
-  font-size: 1.3em;
-  margin: 0;
+  font-size: 1.6em;
+  text-align: right;
 }
 
 /* Display list items side by side */
@@ -108,35 +110,37 @@ nav h1 {
   height: 400px;
   width: 100%;
   background-color: #ccc;
-  margin-bottom: 6em;
 }
 /* ====================== Restaurant Filtering ====================== */
 .filter-options {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  height: 6em;
   background-color: #3397DB;
   justify-content: space-around;
+  align-content: center;
   text-align: center;
-  padding: 0.4em;
 }
 
 .filter-options h2 {
   width: 100%;
-  color: white;
+  color: white;  padding-bottom: 0.3em;
+
 }
 
 .filter-options select {
   background-color: white;
-  border: 1px solid #fff;
   font-family: Arial,sans-serif;
   min-height: 48px;
+  min-width: 48px;
+  width: 30%;
 }
 
 /* ====================== Restaurant Listing ====================== */
 #restaurants-list {
   display: flex;
-  flex-wrap: wrap-reverse;
+  flex-wrap: wrap;
   justify-content: center;
   background-color: #f3f3f3;
   list-style: outside none none;
@@ -199,7 +203,6 @@ nav h1 {
 
 .inside #map {
   background-color: #ccc;  
-  top: 7em;
 }
 
 .inside #footer {
@@ -243,33 +246,106 @@ nav h1 {
   align-items: center;
 }
 
-#reviews-container {
+#reviews-container{
+  margin-top: 2em;
 }
 
 #reviews-container h2 {
+  border: 1px solid #d9d9d9;    
+  padding: 0.2em;    
   color: #f58500;
   font-weight: 300;
 }
 
 #reviews-list li {
-  flex-wrap: wrap;
   display: flex;
-  border-bottom: 1px solid #d9d9d9;
+  flex-wrap: wrap;
   list-style-type: none;
-  text-align: center;  
-  padding-bottom: 1em;
+  text-align: center;    
 }
 
-#reviews-list li span {
+#reviews-list li p{
+  border-bottom: 1px solid #d9d9d9;
+  padding: 0.5em 1em;
+  width: 99%;
+  text-align: justify;
+  margin-bottom: 1em;
+}
+
+#reviews-list li:nth-child(1){
+  border: 1px solid #d9d9d9;   
+}
+
+#reviews-list li span {  
   padding: 0.5em;
-  flex: 50%;
-  width: 30%;
+  flex: 35%;
+  width: 30%;  
+  border-top: 1px solid #fff;
+}
+
+.review-name{
+  background-color: grey;
+  color: white;
+  border-radius:0px 100px 100px 0px;
+  -moz-border-radius:0px 100px 100px 0px;
+  -webkit-border-radius:0px 100px 100px 0px; 
+}
+
+.review-rating{
+  background-color: #f58500;
+  color: white;
+  font-size: 1.3em;
 }
 
 #restaurant-hours{
-  width: 80%;
+  width: 94%;
+  padding: 0.5em;
+}
+
+#restaurant-hours tr:nth-child(even)  {
+  background-color: #d9d9d9;
 }
 
 #restaurant-hours td:nth-child(2)  {
   text-align: right;
+}
+
+@media screen and (min-width: 500px){
+  .restaurant-content{
+    width: 49%;
+    justify-content: space-between;
+    margin-bottom: 1em;
+  }
+
+    #restaurant-hours{
+    width: 60%;
+  }
+
+  .filter-options{
+    justify-content: space-between;
+    padding: 0.5em 1em;
+  }
+
+  .filter-options select{
+    width: 40%;
+  }
+
+}
+
+@media screen and (min-width: 600px){
+  .filter-options{
+    height: auto;
+    justify-content: space-around;
+    align-content: center;
+ }
+
+  .filter-options select{
+    width: auto;
+  }
+
+  .filter-options h2{
+    align-self: center;
+    width: auto;
+    padding: 0;
+  }  
 }

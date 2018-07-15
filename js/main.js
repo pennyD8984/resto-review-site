@@ -173,7 +173,8 @@ createRestaurantHTML = (restaurant) => {
   const li = document.createElement('li');
   li.classList.add('restaurant-content')
   const image = document.createElement('img');
-  image.className = 'restaurant-img';
+  image.classList = 'restaurant-img';
+  image.alt = 'restaurant image';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
   li.append(image);
 
