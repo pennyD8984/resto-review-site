@@ -73,7 +73,6 @@ fetchCuisines = () => {
  */
 fillCuisinesHTML = (cuisines = self.cuisines) => {
   const select = document.getElementById('cuisines-select');
-
   cuisines.forEach(cuisine => {
     const option = document.createElement('option');
     option.innerHTML = cuisine;
@@ -174,7 +173,7 @@ createRestaurantHTML = (restaurant) => {
   li.classList.add('restaurant-content');
   const image = document.createElement('img');
   image.classList = 'restaurant-img lazyload';
-  image.setAttribute('data-src', DBHelper.imageUrlForRestaurant(restaurant));
+  image.src = DBHelper.imageUrlForRestaurant(restaurant);
   image.setAttribute('alt', `An image of ${restaurant.name}`);
   li.append(image);
   lazyload();

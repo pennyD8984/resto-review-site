@@ -154,6 +154,7 @@ class DBHelper {
       return (`/img/${restaurant.photograph}.jpg`);
     }
   }
+
   /**
    * Map marker for a restaurant.
    */
