@@ -120,6 +120,7 @@ nav h1 {
   background-color: #3397DB;
   justify-content: space-around;
   text-align: center;
+  justify-content: center;
 }
 
 .filter-options{

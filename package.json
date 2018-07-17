@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/pennyD8984/resto-review-site/issues"
   },
-  "homepage": "https://github.com/pennyD8984/resto-review-site#readme"
+  "homepage": "https://github.com/pennyD8984/resto-review-site#readme",
+  "dependencies": {
+    "@power-elements/lazy-image": "^1.2.3"
+  }
 }

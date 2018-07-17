@@ -173,11 +173,11 @@ createRestaurantHTML = (restaurant) => {
   const li = document.createElement('li');
   li.classList.add('restaurant-content');
   const image = document.createElement('img');
-  image.classList = 'restaurant-img';
-  image.src = DBHelper.imageUrlForRestaurant(restaurant);
+  image.classList = 'restaurant-img lazyload';
+  image.setAttribute('data-src', DBHelper.imageUrlForRestaurant(restaurant));
   image.setAttribute('alt', `An image of ${restaurant.name}`);
-  // image.setAttribute('tabindex', 0);
   li.append(image);
+  lazyload();
 
   const name = document.createElement('h3');
   name.innerHTML = restaurant.name;
