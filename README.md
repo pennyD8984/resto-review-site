@@ -1,6 +1,24 @@
-# Mobile Web Specialist Certification Course
+# Restaurant Reviews App—Stage 1  
 ---
-#### _Three Stage Course Material Project - Restaurant Reviews_
+Project rubric:  
+https://review.udacity.com/#!/rubrics/1090/view
+
+## What is this project about:  
+Our goal is the transform the starter code into a fully functional, mobile friendly website.  
+
+### Steps taken to achieve the intended result:   
+* Added a MapBox API key for the map
+* Added flexibility to the layout  
+* Added accessibility features
+* Added viewport tags and mobile friendly css
+* Added a service worker and the chance to browse the website offline
+
+## How to use:
+Clone the git repository
+`git@github.com:pennyD8984/resto-review-site.git`  
+
+Run `python3 -m http.server 8000`   
+Head to `http://localhost:8000/`
 
 ## Project Overview: Stage 1
 
