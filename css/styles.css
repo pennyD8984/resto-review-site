@@ -26,12 +26,12 @@ ul, li {
 }
 
 a {
-  color: #ff9292;
+  color: #ff8814;
   text-decoration: none;
 }
 
 a:hover, a:focus {
-  color: #d85b5b;  
+  color: #f99a3e;  
   text-decoration: none;
 }
 
@@ -119,22 +119,27 @@ nav h1 {
   height: 6em;
   background-color: #3397DB;
   justify-content: space-around;
-  align-content: center;
   text-align: center;
 }
 
-.filter-options h2 {
+.filter-options{
   width: 100%;
-  color: white;  padding-bottom: 0.3em;
-
+  color: white;
 }
 
-.filter-options select {
+.filter-options h3{
+  align-self: center;
+}
+
+
+#neighborhoods-select, #cuisines-select{
   background-color: white;
   font-family: Arial,sans-serif;
   min-height: 48px;
   min-width: 48px;
   width: 30%;
+  height: 60%;
+  align-self: center;
 }
 
 /* ====================== Restaurant Listing ====================== */
@@ -348,4 +353,20 @@ nav h1 {
     width: auto;
     padding: 0;
   }  
+}
+
+@media screen and (min-width: 700px){
+  #maincontent{
+    margin: auto;
+    width: 70%;
+  }
+
+  .restaurant-content{
+    width: 30%;
+  }
+
+  #restaurants-list{
+  	justify-content: space-between;
+  	margin: 0 1em;
+  }
 }
